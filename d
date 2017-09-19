@@ -3,7 +3,8 @@
 cmd=$1
 
 case $1 in
-  "up") docker run -ti -d --name sbt --rm -v `pwd`:/app scala bash;;
+  "build") docker build . -t kfc;;
+  "up") docker run -ti -d -p 8080:8080 --name sbt --rm -v `pwd`:/app kfc bash;;
   "new") docker exec -ti sbt sbt new scalatra/scalatra-sbt.g8;;
-  "repl") docker exec -ti sbt bash -c "cd ./$3 && sbt";;
+  "repl") docker exec -ti sbt bash -c "cd ./kfc && sbt";;
 esac
