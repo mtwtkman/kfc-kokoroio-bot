@@ -4,9 +4,6 @@ ENV SBT_VERSION 0.13.15
 ENV SBT_HOME /usr/local/sbt
 ENV PATH ${PATH}:${SBT_HOME}/bin
 
-ENV KFC_KOKOROIO_BOT_ACCESS_TOKEN set-access-token
-ENV KFC_KOKOROIO_BOT_CALLBACK_SECRET set-callback-secret
-
 RUN mkdir -p "$SBT_HOME"
 
 RUN apk --no-cache --update add openssl
