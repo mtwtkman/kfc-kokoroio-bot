@@ -1,6 +1,7 @@
 import org.scalatra.sbt._
 import org.scalatra.sbt.PluginKeys._
 import ScalateKeys._
+import com.typesafe.sbt.packager.archetypes.JavaAppPacking
 
 val ScalatraVersion = "2.5.1"
 
@@ -47,3 +48,4 @@ scalateTemplateConfig in Compile := {
 }
 
 enablePlugins(JettyPlugin)
+enablePlugins(JavaAppPacking)
