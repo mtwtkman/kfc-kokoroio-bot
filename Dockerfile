@@ -14,5 +14,4 @@ RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/
     echo -ne "- with sbt $SBT_VERSION\n" >> /root/.built
 
 COPY . /app
-WORKDIR /app/kfc/
-CMD ["sbt", "jetty:start"]
+WORKDIR /app
