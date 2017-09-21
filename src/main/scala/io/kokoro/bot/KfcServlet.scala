@@ -48,7 +48,7 @@ class KfcServlet extends KfcStack {
     </html>
   }
 
-  val TORI_PTN  = "^![kK][fF][cC]$"
+  val TORI_PTN  = "^/[kK][fF][cC]$"
   val API_ENDPOINT = "https://kokoro.io/api/v1/bot/rooms/"
 
   post("/") {
